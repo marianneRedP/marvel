@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import createLogger from 'redux-logger';
 import { Provider } from 'react-redux';
 import App from './container/app';
-import { fetchHeroes, fetchHeroesID } from './actions/heroes';
+import { fetchHeroes } from './actions/heroes';
 import _ from 'lodash';
 import reducer from './reducer'
 
