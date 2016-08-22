@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from './hero';
 import HeroID from './hero_id';
 
+
 const Heroes = ({ heroes, onHeroClick, view }) => {
   if (view) {
     const data = _.map(heroes, (hero, id) => 
@@ -23,7 +24,7 @@ const Heroes = ({ heroes, onHeroClick, view }) => {
   };
 
   return (
-    <HeroID heroes={ heroes[0] } />
+      <HeroID heroes={ heroes[0] } />
   );
 
 };

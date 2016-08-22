@@ -2,13 +2,17 @@ import React from 'react';
 import Name from './name';
 import Image from './image';
 import Infos from './infos';
+import { Link } from 'react-router';
 
 const Hero = ({ extension, id, name, onHeroClick, path, urls }) => {
   return (
     <div className='hero'>
-      <Name name={ name } />
-      <Image extension={ extension } id={ id } onHeroClick={ onHeroClick } path={ path } />
-      <Infos urls={ urls } />  </div>
+     <Name name={ name } />
+      <Link to='/hero'>
+        <Image extension={ extension } id={ id } onHeroClick={ onHeroClick } path={ path } />
+      </Link>
+      <Infos urls={ urls } />
+    </div>
   );
   
 };

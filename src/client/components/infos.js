@@ -1,7 +1,8 @@
 import React from 'react';
 import Info from './info';
+import Informations from './informations'
 
-const Infos = ({ urls }) => {
+const Infos = ({ id, urls }) => {
   const data = _.map(urls, (url, id) =>
     <Info
       key={ Number(id) }
