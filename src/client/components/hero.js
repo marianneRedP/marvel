@@ -8,7 +8,7 @@ const Hero = ({ extension, id, name, onHeroClick, path, urls }) => {
   return (
     <div className='hero'>
      <Name name={ name } />
-      <Link to='/hero'>
+     <Link to={`/hero/${id}`}>
         <Image extension={ extension } id={ id } onHeroClick={ onHeroClick } path={ path } />
       </Link>
       <Infos urls={ urls } />

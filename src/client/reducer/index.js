@@ -2,7 +2,7 @@ import React from 'react';
 
 import { HEROES_FETCHED, HERO_FETCHED } from '../actions/heroes';
 
-const initialState = { heroes: {}, view: true };
+const initialState = { heroes: {} };
 
 const reducer = (state = initialState, action) => {
   switch(action.type) {
@@ -10,13 +10,11 @@ const reducer = (state = initialState, action) => {
     return {
       ...state,
       heroes: action.heroes,
-      view: true
     }
   case HERO_FETCHED:
     return {
       ...state,
       heroes: action.hero,
-      view: false,
     }
     default:
       return state;
