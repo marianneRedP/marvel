@@ -4,12 +4,12 @@ import Image from './image';
 import Infos from './infos';
 import { Link } from 'react-router';
 
-const Hero = ({ extension, id, name, onHeroClick, path, urls }) => {
+const Hero = ({ extension, id, name, path, urls }) => {
   return (
     <div className='hero'>
      <Name name={ name } />
      <Link to={`/hero/${id}`}>
-        <Image extension={ extension } id={ id } onHeroClick={ onHeroClick } path={ path } />
+        <Image extension={ extension } id={ id } path={ path } />
       </Link>
       <Infos urls={ urls } />
     </div>

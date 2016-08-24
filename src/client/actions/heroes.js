@@ -23,8 +23,8 @@ const requestJSON = (url) => {
 
 const getUrlInfos = () => {
   const ts = Date.now();
-  const publicKey = '298bab46381a6daaaee19aa5c8cafea5';
-  const privateKey = 'b0223681fced28de0fe97e6b9cd091dd36a5b71d';
+  const publicKey = '2a1fa8e58afe69d776a0ec7ed409c791';
+  const privateKey = '0bdbfdab2e33ec304f4cb7825243178cadbdf43e';
   const hash = ts + privateKey + publicKey;
   const urlHashed = crypto.createHash('md5').update(hash).digest('hex');
 

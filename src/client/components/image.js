@@ -1,15 +1,12 @@
 import React from 'react';
 
-const Image = ({ extension, id, onHeroClick, path }) => {
+const Image = ({ extension, id, path }) => {
 
   const thumb = `${ path }.${ extension }`;
 
-  const handleClick = () => {
-    onHeroClick(id);
-  };
   
   return (
-    <div className='image' onClick={ handleClick } >
+    <div className='image' >
       <img src={ thumb } height="200" width="200" />
     </div>
   );

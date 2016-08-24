@@ -17,7 +17,6 @@ class Heroes extends React.Component {
           extension={ hero.thumbnail.extension }
           id={ hero.id }
           name= { hero.name }
-          onHeroClick= { this.props.onHeroClick }
           path={ hero.thumbnail.path }
           urls={ hero.urls }
         />);
@@ -31,7 +30,6 @@ class Heroes extends React.Component {
 
 Heroes.propTypes = {
   heroes: React.PropTypes.object.isRequired,
-  onHeroClick: React.PropTypes.func.isRequired,
 };
 
-export default connect(state => ({ heroes: state.heroes }), { onHeroClick: fetchHero, fetchHeroes })(Heroes);
+export default connect(state => ({ heroes: state.heroes }), { fetchHeroes })(Heroes);

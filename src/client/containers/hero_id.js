@@ -17,21 +17,21 @@ class HeroID extends React.Component {
 
 
     render() {
-      const hero = this.props.heroes[this.props.params.id];
-      console.log('--------', hero);
-
-      if (!hero) {
+      const hero = this.props.heroes;
+     
+      if (!this.props.heroes) {
         console.log('NO HERO');
         return (
-          <HeroID/> || <div className='heroid'></div>
+          <div className='heroid'></div>
         )
       };
 
       if (hero) {
-      console.log('HERO');
+      
       const comics = _.map(hero.comics.items, (comic, id) => <span key={ id }>{ comic.name }<br/></span>);
       const series = _.map(hero.series.items, (series, id) => <span key={ id }>{ series.name }<br/></span>);
       const stories = _.map(hero.stories.items, (stories, id) => <span key={ id }>{ stories.name }<br/></span>);
+
     
       return (
         <div className='heroid' >
@@ -57,5 +57,6 @@ HeroID.propTypes = {
   heroes: React.PropTypes.array,
 };
 
-export default connect(state => ({ heroes: state.heroes }), { fetchHero, fetchHeroes })(HeroID);
+
+export default connect(state => ({ heroes: state.heroes[0] }), { fetchHero })(HeroID);
 
